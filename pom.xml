@@ -58,19 +58,19 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
       <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-assembly-plugin</artifactId>
-			<configuration>
-				<archive>
-					<manifest>
-						<mainClass>com.pegasus.indexation.Indexation</mainClass>
-					</manifest>
-				</archive>
-				<descriptorRefs>
-					<descriptorRef>achivo</descriptorRef>
-				</descriptorRefs>
-			</configuration>
-		</plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.pegasus.indexation.Indexation</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>achivo</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
