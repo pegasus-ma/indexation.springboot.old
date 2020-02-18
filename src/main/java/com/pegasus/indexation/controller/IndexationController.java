@@ -53,7 +53,7 @@ public class IndexationController {
             final Integer myPort = Integer.parseInt(prop.getProperty("indexation.proxy.port"));
             
             if (myProxy == null || "".equals(myProxy) || myPort == null) {
-                response.setState("Proxy confuguration problem");
+                response.setState("Proxy confuguration problem : define a proxy in the file indexation.properties.");
                 return new ResponseEntity<PostResponse>(response, HttpStatus.INTERNAL_SERVER_ERROR);
             }
             
