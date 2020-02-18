@@ -1,6 +1,7 @@
 package com.pegasus.indexation.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 
@@ -10,20 +11,20 @@ import java.io.Serializable;
 public class DeleteResponse implements Serializable {
 
     private static final long serialVersionUID = -7081805896943833645L;
-    private String url;
+    private List<String> urlsDeleted;
 
     /**
-     * @return the url.
+     * @return the urlsDeleted.
      */
-    public String getUrl() {
-        return url;
+    public List<String> getUrlsDeleted() {
+        return urlsDeleted;
     }
 
     /**
-     * @param url the url to set.
+     * @param urlsDeleted the urlsDeleted to set.
      */
-    public void setUrl(String url) {
-        this.url = url;
+    public void setUrlsDeleted(List<String> urlsDeleted) {
+        this.urlsDeleted = urlsDeleted;
     }
 
 }

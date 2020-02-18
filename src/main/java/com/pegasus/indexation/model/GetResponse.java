@@ -11,20 +11,20 @@ import java.util.List;
 public class GetResponse implements Serializable {
 
     private static final long serialVersionUID = -7081805896943833645L;
-    private List<String> urls;
+    private List<String> urlsFound;
 
     /**
-     * @return the urls.
+     * @return the urlsFound.
      */
-    public List<String> getUrls() {
-        return urls;
+    public List<String> getUrlsFound() {
+        return urlsFound;
     }
 
     /**
-     * @param urls the urls to set.
+     * @param urlsFound the urlsFound to set.
      */
-    public void setUrls(List<String> urls) {
-        this.urls = urls;
+    public void setUrlsFound(List<String> urlsFound) {
+        this.urlsFound = urlsFound;
     }
 
 }
