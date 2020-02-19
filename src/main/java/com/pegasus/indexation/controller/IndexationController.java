@@ -57,6 +57,8 @@ public class IndexationController {
                 return new ResponseEntity<PostResponse>(response, HttpStatus.INTERNAL_SERVER_ERROR);
             }
             
+            System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
+            
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(myProxy, myPort));
             URL url = new URL(request.getUrl());
             URLConnection urlConnection = url.openConnection(proxy);
