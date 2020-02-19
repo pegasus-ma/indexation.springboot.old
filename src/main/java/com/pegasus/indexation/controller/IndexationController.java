@@ -27,6 +27,7 @@ import com.pegasus.indexation.model.GetResponse;
 import com.pegasus.indexation.model.PostRequest;
 import com.pegasus.indexation.model.PostResponse;
 import com.pegasus.indexation.service.IServiceUrl;
+import com.pegasus.indexation.util.SslUtil;
 
 /**
  * 
@@ -61,6 +62,7 @@ public class IndexationController {
             
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(myProxy, myPort));
             URL url = new URL(request.getUrl());
+            SslUtil.ignoreSsl();
             URLConnection urlConnection = url.openConnection(proxy);
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
