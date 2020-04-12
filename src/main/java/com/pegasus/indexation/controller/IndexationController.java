@@ -63,7 +63,7 @@ public class IndexationController {
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(myProxy, myPort));
             URL url = new URL(request.getUrl());
             SslUtil.ignoreSsl();
-            URLConnection urlConnection = url.openConnection(proxy);
+            URLConnection urlConnection = url.openConnection();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
 
